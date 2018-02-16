@@ -1,0 +1,563 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> Reading design: aes_module.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "aes_module.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "aes_module"
+Output Format                      : NGC
+Target Device                      : xc6vlx75t-3-ff484
+
+---- Source Options
+Top Module Name                    : aes_module
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\pa1038-DO NOT DELETE\aes_128_v3\key_schedule.vhd" into library work
+Parsing entity <key_schedule>.
+Parsing architecture <Behavioral> of entity <key_schedule>.
+Parsing VHDL file "D:\pa1038-DO NOT DELETE\aes_128_v3\aes_module.vhd" into library work
+Parsing entity <aes_module>.
+Parsing architecture <Behavioral> of entity <aes_module>.
+WARNING:HDLCompiler:946 - "D:\pa1038-DO NOT DELETE\aes_128_v3\aes_module.vhd" Line 65: Actual for formal port round_number is neither a static name nor a globally static expression
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <aes_module> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <key_schedule> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <aes_module>.
+    Related source file is "D:\pa1038-DO NOT DELETE\aes_128_v3\aes_module.vhd".
+WARNING:Xst:647 - Input <d> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <keys_filled>.
+    Found 4-bit register for signal <round_number>.
+    Found 1-bit register for signal <en>.
+    Found 4-bit adder for signal <round_number[3]_GND_4_o_add_5_OUT> created at line 92.
+    Found 4-bit subtractor for signal <GND_4_o_GND_4_o_sub_9_OUT<3:0>> created at line 98.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   6 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <aes_module> synthesized.
+
+Synthesizing Unit <key_schedule>.
+    Related source file is "D:\pa1038-DO NOT DELETE\aes_128_v3\key_schedule.vhd".
+WARNING:Xst:647 - Input <clr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <send_key> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 128-bit register for signal <keys<1>>.
+    Found 128-bit register for signal <keys<2>>.
+    Found 128-bit register for signal <keys<3>>.
+    Found 128-bit register for signal <keys<4>>.
+    Found 128-bit register for signal <keys<5>>.
+    Found 128-bit register for signal <keys<6>>.
+    Found 128-bit register for signal <keys<7>>.
+    Found 128-bit register for signal <keys<8>>.
+    Found 128-bit register for signal <keys<9>>.
+    Found 128-bit register for signal <keys<10>>.
+    Found 128-bit register for signal <round_key>.
+    Found 128-bit register for signal <keys<0>>.
+    Found 4-bit subtractor for signal <GND_5_o_GND_5_o_sub_2_OUT<3:0>> created at line 98.
+INFO:Xst:3019 - HDL ADVISOR - 2048 flip-flops were inferred for signal <keys>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Found 256x8-bit Read Only RAM for signal <GND_5_o_GND_5_o_wide_mux_3_OUT>
+    Found 256x8-bit Read Only RAM for signal <GND_5_o_GND_5_o_wide_mux_6_OUT>
+    Found 256x8-bit Read Only RAM for signal <GND_5_o_GND_5_o_wide_mux_7_OUT>
+    Found 256x8-bit Read Only RAM for signal <GND_5_o_GND_5_o_wide_mux_8_OUT>
+INFO:Xst:3019 - HDL ADVISOR - 2048 flip-flops were inferred for signal <keys>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Found 128-bit 11-to-1 multiplexer for signal <GND_5_o_X_5_o_wide_mux_2_OUT> created at line 98.
+    Found 128-bit 11-to-1 multiplexer for signal <round_number[3]_X_5_o_wide_mux_36_OUT> created at line 105.
+    Summary:
+	inferred   4 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred 1536 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <key_schedule> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 256x8-bit single-port Read Only RAM                   : 4
+# Adders/Subtractors                                   : 3
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 2
+# Registers                                            : 15
+ 1-bit register                                        : 2
+ 128-bit register                                      : 12
+ 4-bit register                                        : 1
+# Multiplexers                                         : 8
+ 128-bit 11-to-1 multiplexer                           : 2
+ 128-bit 2-to-1 multiplexer                            : 1
+ 4-bit 2-to-1 multiplexer                              : 5
+# Xors                                                 : 5
+ 32-bit xor2                                           : 4
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <round_key_0> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_1> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_2> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_3> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_4> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_5> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_6> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_7> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_8> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_9> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_10> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_11> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_12> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_13> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_14> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_15> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_16> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_17> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_18> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_19> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_20> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_21> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_22> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_23> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_24> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_25> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_26> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_27> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_28> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_29> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_30> of sequential type is unconnected in block <key_scheduler>.
+WARNING:Xst:2677 - Node <round_key_31> of sequential type is unconnected in block <key_scheduler>.
+
+Synthesizing (advanced) Unit <key_schedule>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_GND_5_o_GND_5_o_wide_mux_3_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <GND_5_o_X_5_o_wide_mux_2_OUT<23:16>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_GND_5_o_GND_5_o_wide_mux_6_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <GND_5_o_X_5_o_wide_mux_2_OUT<15:8>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_GND_5_o_GND_5_o_wide_mux_7_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <GND_5_o_X_5_o_wide_mux_2_OUT<7:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_GND_5_o_GND_5_o_wide_mux_8_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <GND_5_o_X_5_o_wide_mux_2_OUT<31:24>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <key_schedule> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 256x8-bit single-port distributed Read Only RAM       : 4
+# Adders/Subtractors                                   : 3
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 2
+# Registers                                            : 1542
+ Flip-Flops                                            : 1542
+# Multiplexers                                         : 262
+ 1-bit 11-to-1 multiplexer                             : 256
+ 128-bit 2-to-1 multiplexer                            : 1
+ 4-bit 2-to-1 multiplexer                              : 5
+# Xors                                                 : 5
+ 32-bit xor2                                           : 4
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <aes_module> ...
+
+Optimizing unit <key_schedule> ...
+WARNING:Xst:2677 - Node <key_scheduler/round_key_31> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_30> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_29> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_28> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_27> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_26> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_25> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_24> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_23> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_22> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_21> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_20> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_19> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_18> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_17> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_16> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_15> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_14> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_13> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_12> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_11> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_10> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_9> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_8> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_7> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_6> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_5> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_4> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_3> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_2> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_1> of sequential type is unconnected in block <aes_module>.
+WARNING:Xst:2677 - Node <key_scheduler/round_key_0> of sequential type is unconnected in block <aes_module>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block aes_module, actual ratio is 6.
+FlipFlop round_number_0 has been replicated 1 time(s)
+FlipFlop round_number_1 has been replicated 4 time(s)
+FlipFlop round_number_2 has been replicated 3 time(s)
+FlipFlop round_number_3 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1519
+ Flip-Flops                                            : 1519
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : aes_module.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1859
+#      GND                         : 1
+#      LUT2                        : 4
+#      LUT3                        : 253
+#      LUT4                        : 33
+#      LUT5                        : 245
+#      LUT6                        : 1006
+#      MUXF7                       : 284
+#      MUXF8                       : 32
+#      VCC                         : 1
+# FlipFlops/Latches                : 1519
+#      FD                          : 97
+#      FDCE                        : 14
+#      FDE                         : 1408
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 258
+#      IBUF                        : 130
+#      OBUF                        : 128
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vlx75tff484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1519  out of  93120     1%  
+ Number of Slice LUTs:                 1541  out of  46560     3%  
+    Number used as Logic:              1541  out of  46560     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2487
+   Number with an unused Flip Flop:     968  out of   2487    38%  
+   Number with an unused LUT:           946  out of   2487    38%  
+   Number of fully used LUT-FF pairs:   573  out of   2487    23%  
+   Number of unique control sets:        14
+
+IO Utilization: 
+ Number of IOs:                         387
+ Number of bonded IOBs:                 259  out of    240   107% (*) 
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 1519  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.392ns (Maximum Frequency: 294.831MHz)
+   Minimum input arrival time before clock: 1.063ns
+   Maximum output required time after clock: 0.756ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.392ns (frequency: 294.831MHz)
+  Total number of paths / destination ports: 958767 / 2940
+-------------------------------------------------------------------------
+Delay:               3.392ns (Levels of Logic = 8)
+  Source:            round_number_2_2 (FF)
+  Destination:       key_scheduler/keys_0_118 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: round_number_2_2 to key_scheduler/keys_0_118
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            17   0.280   0.668  round_number_2_2 (round_number_2_2)
+     LUT6:I0->O            1   0.053   0.000  key_scheduler/mux211_5_f7_SW0_G (N1285)
+     MUXF7:I1->O           4   0.187   0.310  key_scheduler/mux211_5_f7_SW0 (N448)
+     LUT6:I5->O           32   0.053   0.701  key_scheduler/GND_5_o_GND_5_o_sub_2_OUT<3>83 (key_scheduler/GND_5_o_X_5_o_wide_mux_2_OUT<5>)
+     LUT6:I0->O            1   0.053   0.000  key_scheduler_Mram_GND_5_o_GND_5_o_wide_mux_7_OUT3 (key_scheduler_Mram_GND_5_o_GND_5_o_wide_mux_7_OUT2)
+     MUXF7:I1->O           1   0.187   0.000  key_scheduler_Mram_GND_5_o_GND_5_o_wide_mux_7_OUT_f7_0 (key_scheduler_Mram_GND_5_o_GND_5_o_wide_mux_7_OUT_f71)
+     MUXF8:I0->O           6   0.131   0.319  key_scheduler_Mram_GND_5_o_GND_5_o_wide_mux_7_OUT_f8 (key_scheduler/GND_5_o_GND_5_o_wide_mux_7_OUT<0>)
+     LUT6:I5->O           11   0.053   0.343  key_scheduler/Mxor_GND_5_o_GND_5_o_xor_9_OUT_8_xo<0>1 (key_scheduler/GND_5_o_GND_5_o_xor_9_OUT<8>)
+     LUT6:I5->O            1   0.053   0.000  key_scheduler/Mmux_keys[0][127]_original_key[127]_mux_25_OUT610 (key_scheduler/keys[0][127]_original_key[127]_mux_25_OUT<104>)
+     FDE:D                    -0.012          key_scheduler/keys_0_104
+    ----------------------------------------
+    Total                      3.392ns (1.050ns logic, 2.342ns route)
+                                       (31.0% logic, 69.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 160 / 156
+-------------------------------------------------------------------------
+Offset:              1.063ns (Levels of Logic = 3)
+  Source:            key<91> (PAD)
+  Destination:       key_scheduler/keys_0_91 (FF)
+  Destination Clock: clk rising
+
+  Data Path: key<91> to key_scheduler/keys_0_91
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.003   0.362  key_91_IBUF (key_91_IBUF)
+     LUT4:I2->O            1   0.053   0.592  key_scheduler/Mxor_GND_5_o_GND_5_o_xor_10_OUT_27_xo<0>1_SW3 (N1042)
+     LUT6:I1->O            1   0.053   0.000  key_scheduler/Mmux_keys[0][127]_original_key[127]_mux_25_OUT1191 (key_scheduler/keys[0][127]_original_key[127]_mux_25_OUT<91>)
+     FDE:D                    -0.012          key_scheduler/keys_0_91
+    ----------------------------------------
+    Total                      1.063ns (0.109ns logic, 0.954ns route)
+                                       (10.3% logic, 89.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 100 / 100
+-------------------------------------------------------------------------
+Offset:              0.756ns (Levels of Logic = 1)
+  Source:            round_number_0 (FF)
+  Destination:       q<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: round_number_0 to q<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q          1001   0.280   0.473  round_number_0 (round_number_0)
+     OBUF:I->O                 0.003          q_0_OBUF (q<0>)
+    ----------------------------------------
+    Total                      0.756ns (0.283ns logic, 0.473ns route)
+                                       (37.4% logic, 62.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.392|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 22.04 secs
+ 
+--> 
+
+Total memory usage is 338860 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   69 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

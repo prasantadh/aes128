@@ -22,7 +22,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx primitives in this code.
@@ -33,20 +33,36 @@ entity aes_module is
     Port ( clr : in  STD_LOGIC;
 			  clk : in  STD_LOGIC;
            enc : in  STD_LOGIC;
-           key : in  STD_LOGIC_VECTOR (128 downto 0);
-           d   : in  STD_LOGIC_VECTOR (128 downto 0);
-           q   : out STD_LOGIC_VECTOR (128 downto 0));
+           key : in  STD_LOGIC_VECTOR (127 downto 0);
+           d   : in  STD_LOGIC_VECTOR (127 downto 0);
+           q   : out STD_LOGIC_VECTOR (127 downto 0));
 end aes_module;
 
 architecture Behavioral of aes_module is
+
+	component key_schedule is
+    port ( clr : in  STD_LOGIC;
+           clk : in  STD_LOGIC;
+           original_key : in  STD_LOGIC_VECTOR (127 downto 0);
+           round_number : in  STD_LOGIC_VECTOR (3 downto 0);
+			  send_key  : in STD_LOGIC;
+           round_key : out  STD_LOGIC_VECTOR (127 downto 0));
+	end component;
 
 	-- the signal to keep track of the current round number
 	signal round_number : integer range 0 to 10 := 0;
 	
 	-- the bit to persist state 0 for a full cycle
-	signal enable_module : bit := '0';
-	signal keys_filled   : bit := '0';  -- the bit to indicate that all keys have been filled
+	signal en : bit := '0';
+	signal keys_filled   : STD_LOGIC := '0';  -- the bit to indicate that all keys have been filled
+	
+	-- signal to get from other components
+	signal round_key : STD_LOGIC_VECTOR(127 downto 0); 
 begin
+
+
+-- map the ports of other components
+key_scheduler : key_schedule port map (clr, clk, key, STD_LOGIC_VECTOR(to_unsigned(round_number, 4)), keys_filled, round_key);
 
 state_machine_process:
 process(clr, clk)
@@ -86,6 +102,6 @@ begin
 	end if;
 end process;
 
-	
+q <= round_key;
 end Behavioral;
 

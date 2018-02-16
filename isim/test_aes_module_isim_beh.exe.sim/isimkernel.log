@@ -1,0 +1,10 @@
+Command line:
+   test_aes_module_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  15308
+
+Fri Feb 16 18:04:45 2018
+
+
+ Elaboration Time: 0.125 sec

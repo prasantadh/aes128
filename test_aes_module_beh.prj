@@ -1,0 +1,3 @@
+vhdl work "key_schedule.vhd"
+vhdl work "aes_module.vhd"
+vhdl work "test_aes_module.vhd"

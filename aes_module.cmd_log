@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/pa1038-DO NOT DELETE/aes_128_v3/aes_module.xst" -ofn "D:/pa1038-DO NOT DELETE/aes_128_v3/aes_module.syr" 
