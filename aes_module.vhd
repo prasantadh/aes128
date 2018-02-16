@@ -49,6 +49,15 @@ architecture Behavioral of aes_module is
            round_key : out  STD_LOGIC_VECTOR (127 downto 0));
 	end component;
 
+	component encrypt_module is
+    port ( clr : in  STD_LOGIC;
+           clk : in  STD_LOGIC;
+           round_number : in  STD_LOGIC_VECTOR (3 downto 0);
+           round_key : in  STD_LOGIC_VECTOR (127 downto 0);
+           plaintext : in  STD_LOGIC_VECTOR (127 downto 0);
+           ciphertext : out  STD_LOGIC_VECTOR (127 downto 0));
+	end component;
+	
 	-- the signal to keep track of the current round number
 	signal round_number : integer range 0 to 10 := 0;
 	
@@ -58,11 +67,13 @@ architecture Behavioral of aes_module is
 	
 	-- signal to get from other components
 	signal round_key : STD_LOGIC_VECTOR(127 downto 0); 
+	signal ciphertext: STD_LOGIC_VECTOR(127 downto 0);
 begin
 
 
 -- map the ports of other components
 key_scheduler : key_schedule port map (clr, clk, key, STD_LOGIC_VECTOR(to_unsigned(round_number, 4)), keys_filled, round_key);
+encrypter : encrypt_module port map(not keys_filled, clk, STD_LOGIC_VECTOR(to_unsigned(round_number, 4)), round_key, d,ciphertext);
 
 state_machine_process:
 process(clr, clk)
@@ -102,6 +113,6 @@ begin
 	end if;
 end process;
 
-q <= round_key;
+q <= ciphertext;
 end Behavioral;
 

@@ -86,7 +86,7 @@ architecture Behavioral of key_schedule is
 begin
 
 key_schedule_process:
-process(clk, round_number)
+process(send_key, clk, round_number)
 	variable current_key : STD_LOGIC_VECTOR(127 downto 0);
 	variable next_key_0, next_key_1, next_key_2, next_key_3 : STD_LOGIC_VECTOR (31 downto 0) := x"00000000";
 	variable q : STD_LOGIC_VECTOR(127 downto 0);

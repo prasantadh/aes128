@@ -31,6 +31,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="aes_module.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="aes_module.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="aes_module.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="aes_module_envsettings.html"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="aes_module_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="aes_module_xst.xrpt"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
@@ -46,40 +47,55 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1518785489" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1518785489">
+    <transform xil_pn:end_ts="1518793070" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1518793070">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1518789517" xil_pn:in_ck="-3625484243732444992" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1518789517">
+    <transform xil_pn:end_ts="1518793070" xil_pn:in_ck="-668319945670547814" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1518793070">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="aes_module.vhd"/>
+      <outfile xil_pn:name="encrypt_module.vhd"/>
       <outfile xil_pn:name="key_schedule.vhd"/>
       <outfile xil_pn:name="test_aes_module.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1518785544" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-8983299682833279203" xil_pn:start_ts="1518785544">
+    <transform xil_pn:end_ts="1518793070" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-8983299682833279203" xil_pn:start_ts="1518793070">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1518785544" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2051048955738838381" xil_pn:start_ts="1518785544">
+    <transform xil_pn:end_ts="1518793070" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2051048955738838381" xil_pn:start_ts="1518793070">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1518785489" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-8367797612420157293" xil_pn:start_ts="1518785489">
+    <transform xil_pn:end_ts="1518793070" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-8367797612420157293" xil_pn:start_ts="1518793070">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1518789517" xil_pn:in_ck="-3625484243732444992" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1518789517">
+    <transform xil_pn:end_ts="1518793070" xil_pn:in_ck="-668319945670547814" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1518793070">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="aes_module.vhd"/>
+      <outfile xil_pn:name="encrypt_module.vhd"/>
       <outfile xil_pn:name="key_schedule.vhd"/>
       <outfile xil_pn:name="test_aes_module.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1518789523" xil_pn:in_ck="-3625484243732444992" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4644238536377735417" xil_pn:start_ts="1518789517">
+    <transform xil_pn:end_ts="1518793075" xil_pn:in_ck="-668319945670547814" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4644238536377735417" xil_pn:start_ts="1518793070">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
@@ -87,9 +103,12 @@
       <outfile xil_pn:name="test_aes_module_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1518789523" xil_pn:in_ck="4825948096714800428" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="462276074795683388" xil_pn:start_ts="1518789523">
+    <transform xil_pn:end_ts="1518793076" xil_pn:in_ck="4825948096714800428" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="462276074795683388" xil_pn:start_ts="1518793075">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="test_aes_module_isim_beh.wdb"/>
@@ -123,7 +142,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1518788106" xil_pn:in_ck="-4434465347615220237" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="1662257220691829001" xil_pn:start_ts="1518788081">
+    <transform xil_pn:end_ts="1518793392" xil_pn:in_ck="1461620504072177165" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="1662257220691829001" xil_pn:start_ts="1518793359">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>

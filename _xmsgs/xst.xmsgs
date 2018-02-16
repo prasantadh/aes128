@@ -5,118 +5,102 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="946" delta="old" >"D:\pa1038-DO NOT DELETE\aes_128_v3\aes_module.vhd" Line 65: Actual for formal port <arg fmt="%s" index="1">round_number</arg> is neither a static name nor a globally static expression
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"D:\pa1038-DO NOT DELETE\aes_128_v3\aes_module.vhd" Line 75: Actual for formal port <arg fmt="%s" index="1">round_number</arg> is neither a static name nor a globally static expression
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">d</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"D:\pa1038-DO NOT DELETE\aes_128_v3\aes_module.vhd" Line 76: Actual for formal port <arg fmt="%s" index="1">round_number</arg> is neither a static name nor a globally static expression
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"D:\pa1038-DO NOT DELETE\aes_128_v3\key_schedule.vhd" Line 94: <arg fmt="%s" index="1">send_key</arg> should be on the sensitivity list of the process
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">clr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">send_key</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
 <msg type="info" file="Xst" num="3019" delta="new" >HDL ADVISOR - <arg fmt="%s" index="1">2048</arg> flip-flops were inferred for signal &lt;<arg fmt="%s" index="2">keys</arg>&gt;. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
 </msg>
 
 <msg type="info" file="Xst" num="3019" delta="new" >HDL ADVISOR - <arg fmt="%s" index="1">2048</arg> flip-flops were inferred for signal &lt;<arg fmt="%s" index="2">keys</arg>&gt;. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_state[127]_GND_6_o_wide_mux_2_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_state[87]_GND_6_o_wide_mux_3_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_state[47]_GND_6_o_wide_mux_4_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_state[7]_GND_6_o_wide_mux_5_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_state[55]_GND_6_o_wide_mux_7_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_state[95]_GND_6_o_wide_mux_6_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_state[15]_GND_6_o_wide_mux_8_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_state[103]_GND_6_o_wide_mux_9_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_state[63]_GND_6_o_wide_mux_10_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_state[23]_GND_6_o_wide_mux_11_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_state[111]_GND_6_o_wide_mux_12_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_state[31]_GND_6_o_wide_mux_14_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_state[71]_GND_6_o_wide_mux_13_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_state[119]_GND_6_o_wide_mux_15_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_state[79]_GND_6_o_wide_mux_16_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_state[39]_GND_6_o_wide_mux_17_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n1245</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n1759</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n3301</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n1502</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0988</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n2016</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0731</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0474</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n2273</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n2787</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n3044</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n2530</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n3558</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n3815</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n4072</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round_key_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">key_scheduler</arg>&gt;.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n4329</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
 <msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_GND_5_o_GND_5_o_wide_mux_3_OUT</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -131,100 +115,28 @@
 <msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_GND_5_o_GND_5_o_wide_mux_8_OUT</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">Mram_state[127]_GND_6_o_wide_mux_2_OUT</arg>&gt;, &lt;<arg fmt="%s" index="3">Mram_state[87]_GND_6_o_wide_mux_3_OUT</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">Mram_state[127]_GND_6_o_wide_mux_2_OUT1</arg>&gt;
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">Mram_state[47]_GND_6_o_wide_mux_4_OUT</arg>&gt;, &lt;<arg fmt="%s" index="3">Mram_state[7]_GND_6_o_wide_mux_5_OUT</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">Mram_state[47]_GND_6_o_wide_mux_4_OUT1</arg>&gt;
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">Mram_state[55]_GND_6_o_wide_mux_7_OUT</arg>&gt;, &lt;<arg fmt="%s" index="3">Mram_state[95]_GND_6_o_wide_mux_6_OUT</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">Mram_state[55]_GND_6_o_wide_mux_7_OUT1</arg>&gt;
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">Mram_state[15]_GND_6_o_wide_mux_8_OUT</arg>&gt;, &lt;<arg fmt="%s" index="3">Mram_state[103]_GND_6_o_wide_mux_9_OUT</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">Mram_state[15]_GND_6_o_wide_mux_8_OUT1</arg>&gt;
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">Mram_state[63]_GND_6_o_wide_mux_10_OUT</arg>&gt;, &lt;<arg fmt="%s" index="3">Mram_state[23]_GND_6_o_wide_mux_11_OUT</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">Mram_state[63]_GND_6_o_wide_mux_10_OUT1</arg>&gt;
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">Mram_state[111]_GND_6_o_wide_mux_12_OUT</arg>&gt;, &lt;<arg fmt="%s" index="3">Mram_state[31]_GND_6_o_wide_mux_14_OUT</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">Mram_state[111]_GND_6_o_wide_mux_12_OUT1</arg>&gt;
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">Mram_state[71]_GND_6_o_wide_mux_13_OUT</arg>&gt;, &lt;<arg fmt="%s" index="3">Mram_state[119]_GND_6_o_wide_mux_15_OUT</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">Mram_state[71]_GND_6_o_wide_mux_13_OUT1</arg>&gt;
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">key_scheduler/round_key_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_module</arg>&gt;.
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">Mram_state[79]_GND_6_o_wide_mux_16_OUT</arg>&gt;, &lt;<arg fmt="%s" index="3">Mram_state[39]_GND_6_o_wide_mux_17_OUT</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">Mram_state[79]_GND_6_o_wide_mux_16_OUT1</arg>&gt;
 </msg>
 
 <msg type="warning" file="Xst" num="1336" delta="new" > (*) More than 100% of Device resources are used

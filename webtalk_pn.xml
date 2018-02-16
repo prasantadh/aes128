@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Fri Feb 16 17:34:41 2018">
+<application name="pn" timeStamp="Fri Feb 16 19:02:40 2018">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="0F7B1388B0A94A178D2198AA8DE42C26" type="project"/>
 <property name="ProjectIteration" value="0" type="project"/>
@@ -11,6 +11,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ProjectCreationTimestamp" value="2018-02-16T14:16:20" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
+<property name="PROPEXT_xilxBitgCfg_DCIUpdateMode_virtex6" value="As Required" type="process"/>
 <property name="PROP_Enable_Message_Filtering" value="false" type="design"/>
 <property name="PROP_FitterReportFormat" value="HTML" type="process"/>
 <property name="PROP_LastAppliedGoal" value="Balanced" type="design"/>
@@ -29,6 +30,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_selectedSimRootSourceNode_behav" value="work.test_aes_module" type="process"/>
+<property name="PROP_xilxBitgStart_IntDone_virtex5" value="true" type="process"/>
 <property name="PROP_AutoTop" value="true" type="design"/>
 <property name="PROP_DevFamily" value="Virtex6" type="design"/>
 <property name="PROP_DevDevice" value="xc6vlx75t" type="design"/>
@@ -37,7 +39,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_Synthesis_Tool" value="XST (VHDL/Verilog)" type="design"/>
 <property name="PROP_DevSpeed" value="-3" type="design"/>
 <property name="PROP_PreferredLanguage" value="Verilog" type="design"/>
-<property name="FILE_VHDL" value="3" type="source"/>
+<property name="FILE_VHDL" value="4" type="source"/>
 </section>
 </application>
 </document>

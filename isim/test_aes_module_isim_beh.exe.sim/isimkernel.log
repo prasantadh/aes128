@@ -2,9 +2,9 @@ Command line:
    test_aes_module_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  15308
+     -socket  15939
 
-Fri Feb 16 18:04:45 2018
+Fri Feb 16 19:17:02 2018
 
 
- Elaboration Time: 0.125 sec
+ Elaboration Time: 0.09375 sec

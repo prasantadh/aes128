@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.20 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: aes_module.prj
 
@@ -108,10 +108,14 @@ Slice Utilization Ratio Delta      : 5
 Parsing VHDL file "D:\pa1038-DO NOT DELETE\aes_128_v3\key_schedule.vhd" into library work
 Parsing entity <key_schedule>.
 Parsing architecture <Behavioral> of entity <key_schedule>.
+Parsing VHDL file "D:\pa1038-DO NOT DELETE\aes_128_v3\encrypt_module.vhd" into library work
+Parsing entity <encrypt_module>.
+Parsing architecture <Behavioral> of entity <encrypt_module>.
 Parsing VHDL file "D:\pa1038-DO NOT DELETE\aes_128_v3\aes_module.vhd" into library work
 Parsing entity <aes_module>.
 Parsing architecture <Behavioral> of entity <aes_module>.
-WARNING:HDLCompiler:946 - "D:\pa1038-DO NOT DELETE\aes_128_v3\aes_module.vhd" Line 65: Actual for formal port round_number is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\pa1038-DO NOT DELETE\aes_128_v3\aes_module.vhd" Line 75: Actual for formal port round_number is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\pa1038-DO NOT DELETE\aes_128_v3\aes_module.vhd" Line 76: Actual for formal port round_number is neither a static name nor a globally static expression
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -120,6 +124,9 @@ WARNING:HDLCompiler:946 - "D:\pa1038-DO NOT DELETE\aes_128_v3\aes_module.vhd" Li
 Elaborating entity <aes_module> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <key_schedule> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "D:\pa1038-DO NOT DELETE\aes_128_v3\key_schedule.vhd" Line 94: send_key should be on the sensitivity list of the process
+
+Elaborating entity <encrypt_module> (architecture <Behavioral>) from library <work>.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -127,12 +134,11 @@ Elaborating entity <key_schedule> (architecture <Behavioral>) from library <work
 
 Synthesizing Unit <aes_module>.
     Related source file is "D:\pa1038-DO NOT DELETE\aes_128_v3\aes_module.vhd".
-WARNING:Xst:647 - Input <d> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <keys_filled>.
     Found 4-bit register for signal <round_number>.
     Found 1-bit register for signal <en>.
-    Found 4-bit adder for signal <round_number[3]_GND_4_o_add_5_OUT> created at line 92.
-    Found 4-bit subtractor for signal <GND_4_o_GND_4_o_sub_9_OUT<3:0>> created at line 98.
+    Found 4-bit adder for signal <round_number[3]_GND_4_o_add_5_OUT> created at line 103.
+    Found 4-bit subtractor for signal <GND_4_o_GND_4_o_sub_9_OUT<3:0>> created at line 109.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred   6 D-type flip-flop(s).
@@ -142,7 +148,6 @@ Unit <aes_module> synthesized.
 Synthesizing Unit <key_schedule>.
     Related source file is "D:\pa1038-DO NOT DELETE\aes_128_v3\key_schedule.vhd".
 WARNING:Xst:647 - Input <clr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <send_key> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 128-bit register for signal <keys<1>>.
     Found 128-bit register for signal <keys<2>>.
     Found 128-bit register for signal <keys<3>>.
@@ -153,7 +158,6 @@ WARNING:Xst:647 - Input <send_key> is never used. This port will be preserved an
     Found 128-bit register for signal <keys<8>>.
     Found 128-bit register for signal <keys<9>>.
     Found 128-bit register for signal <keys<10>>.
-    Found 128-bit register for signal <round_key>.
     Found 128-bit register for signal <keys<0>>.
     Found 4-bit subtractor for signal <GND_5_o_GND_5_o_sub_2_OUT<3:0>> created at line 98.
 INFO:Xst:3019 - HDL ADVISOR - 2048 flip-flops were inferred for signal <keys>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
@@ -163,20 +167,64 @@ INFO:Xst:3019 - HDL ADVISOR - 2048 flip-flops were inferred for signal <keys>. Y
     Found 256x8-bit Read Only RAM for signal <GND_5_o_GND_5_o_wide_mux_8_OUT>
 INFO:Xst:3019 - HDL ADVISOR - 2048 flip-flops were inferred for signal <keys>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
     Found 128-bit 11-to-1 multiplexer for signal <GND_5_o_X_5_o_wide_mux_2_OUT> created at line 98.
-    Found 128-bit 11-to-1 multiplexer for signal <round_number[3]_X_5_o_wide_mux_36_OUT> created at line 105.
+    Found 128-bit 11-to-1 multiplexer for signal <round_key> created at line 107.
     Summary:
 	inferred   4 RAM(s).
 	inferred   1 Adder/Subtractor(s).
-	inferred 1536 D-type flip-flop(s).
+	inferred 1408 D-type flip-flop(s).
 	inferred   3 Multiplexer(s).
 Unit <key_schedule> synthesized.
+
+Synthesizing Unit <encrypt_module>.
+    Related source file is "D:\pa1038-DO NOT DELETE\aes_128_v3\encrypt_module.vhd".
+    Found 128-bit register for signal <state>.
+    Found 256x8-bit Read Only RAM for signal <state[127]_GND_6_o_wide_mux_2_OUT>
+    Found 256x8-bit Read Only RAM for signal <state[87]_GND_6_o_wide_mux_3_OUT>
+    Found 256x8-bit Read Only RAM for signal <state[47]_GND_6_o_wide_mux_4_OUT>
+    Found 256x8-bit Read Only RAM for signal <state[7]_GND_6_o_wide_mux_5_OUT>
+    Found 256x8-bit Read Only RAM for signal <state[95]_GND_6_o_wide_mux_6_OUT>
+    Found 256x8-bit Read Only RAM for signal <state[55]_GND_6_o_wide_mux_7_OUT>
+    Found 256x8-bit Read Only RAM for signal <state[15]_GND_6_o_wide_mux_8_OUT>
+    Found 256x8-bit Read Only RAM for signal <state[103]_GND_6_o_wide_mux_9_OUT>
+    Found 256x8-bit Read Only RAM for signal <state[63]_GND_6_o_wide_mux_10_OUT>
+    Found 256x8-bit Read Only RAM for signal <state[23]_GND_6_o_wide_mux_11_OUT>
+    Found 256x8-bit Read Only RAM for signal <state[111]_GND_6_o_wide_mux_12_OUT>
+    Found 256x8-bit Read Only RAM for signal <state[71]_GND_6_o_wide_mux_13_OUT>
+    Found 256x8-bit Read Only RAM for signal <state[31]_GND_6_o_wide_mux_14_OUT>
+    Found 256x8-bit Read Only RAM for signal <state[119]_GND_6_o_wide_mux_15_OUT>
+    Found 256x8-bit Read Only RAM for signal <state[79]_GND_6_o_wide_mux_16_OUT>
+    Found 256x8-bit Read Only RAM for signal <state[39]_GND_6_o_wide_mux_17_OUT>
+    Found 256x16-bit Read Only RAM for signal <_n0474>
+    Found 256x16-bit Read Only RAM for signal <_n0731>
+    Found 256x16-bit Read Only RAM for signal <_n0988>
+    Found 256x16-bit Read Only RAM for signal <_n1245>
+    Found 256x16-bit Read Only RAM for signal <_n1502>
+    Found 256x16-bit Read Only RAM for signal <_n1759>
+    Found 256x16-bit Read Only RAM for signal <_n2016>
+    Found 256x16-bit Read Only RAM for signal <_n2273>
+    Found 256x16-bit Read Only RAM for signal <_n2530>
+    Found 256x16-bit Read Only RAM for signal <_n2787>
+    Found 256x16-bit Read Only RAM for signal <_n3044>
+    Found 256x16-bit Read Only RAM for signal <_n3301>
+    Found 256x16-bit Read Only RAM for signal <_n3558>
+    Found 256x16-bit Read Only RAM for signal <_n3815>
+    Found 256x16-bit Read Only RAM for signal <_n4072>
+    Found 256x16-bit Read Only RAM for signal <_n4329>
+    Found 4-bit comparator lessequal for signal <n0000> created at line 139
+    Summary:
+	inferred  32 RAM(s).
+	inferred 128 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <encrypt_module> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 4
- 256x8-bit single-port Read Only RAM                   : 4
+# RAMs                                                 : 36
+ 256x16-bit single-port Read Only RAM                  : 16
+ 256x8-bit single-port Read Only RAM                   : 20
 # Adders/Subtractors                                   : 3
  4-bit adder                                           : 1
  4-bit subtractor                                      : 2
@@ -184,13 +232,17 @@ Macro Statistics
  1-bit register                                        : 2
  128-bit register                                      : 12
  4-bit register                                        : 1
-# Multiplexers                                         : 8
+# Comparators                                          : 1
+ 4-bit comparator lessequal                            : 1
+# Multiplexers                                         : 10
  128-bit 11-to-1 multiplexer                           : 2
- 128-bit 2-to-1 multiplexer                            : 1
+ 128-bit 2-to-1 multiplexer                            : 3
  4-bit 2-to-1 multiplexer                              : 5
-# Xors                                                 : 5
+# Xors                                                 : 24
+ 128-bit xor2                                          : 3
  32-bit xor2                                           : 4
  8-bit xor2                                            : 1
+ 8-bit xor4                                            : 16
 
 =========================================================================
 
@@ -198,38 +250,441 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:2677 - Node <round_key_0> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_1> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_2> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_3> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_4> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_5> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_6> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_7> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_8> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_9> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_10> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_11> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_12> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_13> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_14> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_15> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_16> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_17> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_18> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_19> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_20> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_21> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_22> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_23> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_24> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_25> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_26> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_27> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_28> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_29> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_30> of sequential type is unconnected in block <key_scheduler>.
-WARNING:Xst:2677 - Node <round_key_31> of sequential type is unconnected in block <key_scheduler>.
+
+Synthesizing (advanced) Unit <encrypt_module>.
+INFO:Xst:3226 - The RAM <Mram_state[127]_GND_6_o_wide_mux_2_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <clr>           | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[127]_plaintext[127]_mux_102_OUT<127:120>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_state[87]_GND_6_o_wide_mux_3_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <clr>           | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[127]_plaintext[127]_mux_102_OUT<87:80>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_state[47]_GND_6_o_wide_mux_4_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <clr>           | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[127]_plaintext[127]_mux_102_OUT<47:40>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_state[7]_GND_6_o_wide_mux_5_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <clr>           | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[127]_plaintext[127]_mux_102_OUT<7:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_state[55]_GND_6_o_wide_mux_7_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <clr>           | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[127]_plaintext[127]_mux_102_OUT<55:48>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_state[95]_GND_6_o_wide_mux_6_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <clr>           | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[127]_plaintext[127]_mux_102_OUT<95:88>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_state[15]_GND_6_o_wide_mux_8_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <clr>           | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[127]_plaintext[127]_mux_102_OUT<15:8>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_state[103]_GND_6_o_wide_mux_9_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <clr>           | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[127]_plaintext[127]_mux_102_OUT<103:96>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_state[63]_GND_6_o_wide_mux_10_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <clr>           | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[127]_plaintext[127]_mux_102_OUT<63:56>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_state[23]_GND_6_o_wide_mux_11_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <clr>           | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[127]_plaintext[127]_mux_102_OUT<23:16>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_state[111]_GND_6_o_wide_mux_12_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <clr>           | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[127]_plaintext[127]_mux_102_OUT<111:104>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_state[31]_GND_6_o_wide_mux_14_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <clr>           | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[127]_plaintext[127]_mux_102_OUT<31:24>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_state[71]_GND_6_o_wide_mux_13_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <clr>           | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[127]_plaintext[127]_mux_102_OUT<71:64>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_state[119]_GND_6_o_wide_mux_15_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <clr>           | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[127]_plaintext[127]_mux_102_OUT<119:112>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_state[79]_GND_6_o_wide_mux_16_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <clr>           | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[127]_plaintext[127]_mux_102_OUT<79:72>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_state[39]_GND_6_o_wide_mux_17_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <clr>           | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[127]_plaintext[127]_mux_102_OUT<39:32>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1245> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[127]_GND_6_o_wide_mux_2_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1759> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[87]_GND_6_o_wide_mux_3_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n3301> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[47]_GND_6_o_wide_mux_4_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1502> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[7]_GND_6_o_wide_mux_5_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0988> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[95]_GND_6_o_wide_mux_6_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n2016> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[55]_GND_6_o_wide_mux_7_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0731> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[15]_GND_6_o_wide_mux_8_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0474> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[103]_GND_6_o_wide_mux_9_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n2273> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[63]_GND_6_o_wide_mux_10_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n2787> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[23]_GND_6_o_wide_mux_11_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n3044> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[111]_GND_6_o_wide_mux_12_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n2530> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[71]_GND_6_o_wide_mux_13_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n3558> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[31]_GND_6_o_wide_mux_14_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n3815> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[119]_GND_6_o_wide_mux_15_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n4072> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[79]_GND_6_o_wide_mux_16_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n4329> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state[39]_GND_6_o_wide_mux_17_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <encrypt_module> synthesized (advanced).
 
 Synthesizing (advanced) Unit <key_schedule>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_GND_5_o_GND_5_o_wide_mux_3_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -282,69 +737,53 @@ Unit <key_schedule> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 4
+# RAMs                                                 : 36
+ 256x16-bit single-port distributed Read Only RAM      : 16
+ 256x8-bit single-port block Read Only RAM             : 16
  256x8-bit single-port distributed Read Only RAM       : 4
 # Adders/Subtractors                                   : 3
  4-bit adder                                           : 1
  4-bit subtractor                                      : 2
 # Registers                                            : 1542
  Flip-Flops                                            : 1542
-# Multiplexers                                         : 262
+# Comparators                                          : 1
+ 4-bit comparator lessequal                            : 1
+# Multiplexers                                         : 264
  1-bit 11-to-1 multiplexer                             : 256
- 128-bit 2-to-1 multiplexer                            : 1
+ 128-bit 2-to-1 multiplexer                            : 3
  4-bit 2-to-1 multiplexer                              : 5
-# Xors                                                 : 5
+# Xors                                                 : 24
+ 128-bit xor2                                          : 3
  32-bit xor2                                           : 4
  8-bit xor2                                            : 1
+ 8-bit xor4                                            : 16
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram_state[127]_GND_6_o_wide_mux_2_OUT>, <Mram_state[87]_GND_6_o_wide_mux_3_OUT> are packed into the single block RAM <Mram_state[127]_GND_6_o_wide_mux_2_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram_state[47]_GND_6_o_wide_mux_4_OUT>, <Mram_state[7]_GND_6_o_wide_mux_5_OUT> are packed into the single block RAM <Mram_state[47]_GND_6_o_wide_mux_4_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram_state[55]_GND_6_o_wide_mux_7_OUT>, <Mram_state[95]_GND_6_o_wide_mux_6_OUT> are packed into the single block RAM <Mram_state[55]_GND_6_o_wide_mux_7_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram_state[15]_GND_6_o_wide_mux_8_OUT>, <Mram_state[103]_GND_6_o_wide_mux_9_OUT> are packed into the single block RAM <Mram_state[15]_GND_6_o_wide_mux_8_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram_state[63]_GND_6_o_wide_mux_10_OUT>, <Mram_state[23]_GND_6_o_wide_mux_11_OUT> are packed into the single block RAM <Mram_state[63]_GND_6_o_wide_mux_10_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram_state[111]_GND_6_o_wide_mux_12_OUT>, <Mram_state[31]_GND_6_o_wide_mux_14_OUT> are packed into the single block RAM <Mram_state[111]_GND_6_o_wide_mux_12_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram_state[71]_GND_6_o_wide_mux_13_OUT>, <Mram_state[119]_GND_6_o_wide_mux_15_OUT> are packed into the single block RAM <Mram_state[71]_GND_6_o_wide_mux_13_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram_state[79]_GND_6_o_wide_mux_16_OUT>, <Mram_state[39]_GND_6_o_wide_mux_17_OUT> are packed into the single block RAM <Mram_state[79]_GND_6_o_wide_mux_16_OUT1>
 
 Optimizing unit <aes_module> ...
 
 Optimizing unit <key_schedule> ...
-WARNING:Xst:2677 - Node <key_scheduler/round_key_31> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_30> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_29> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_28> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_27> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_26> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_25> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_24> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_23> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_22> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_21> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_20> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_19> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_18> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_17> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_16> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_15> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_14> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_13> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_12> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_11> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_10> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_9> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_8> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_7> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_6> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_5> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_4> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_3> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_2> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_1> of sequential type is unconnected in block <aes_module>.
-WARNING:Xst:2677 - Node <key_scheduler/round_key_0> of sequential type is unconnected in block <aes_module>.
+
+Optimizing unit <encrypt_module> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block aes_module, actual ratio is 6.
+Found area constraint ratio of 100 (+ 5) on block aes_module, actual ratio is 7.
 FlipFlop round_number_0 has been replicated 1 time(s)
 FlipFlop round_number_1 has been replicated 4 time(s)
-FlipFlop round_number_2 has been replicated 3 time(s)
+FlipFlop round_number_2 has been replicated 4 time(s)
 FlipFlop round_number_3 has been replicated 1 time(s)
 
 Final Macro Processing ...
@@ -353,8 +792,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1519
- Flip-Flops                                            : 1519
+# Registers                                            : 1552
+ Flip-Flops                                            : 1552
 
 =========================================================================
 
@@ -377,24 +816,27 @@ Top Level Output File Name         : aes_module.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1859
+# BELS                             : 2570
 #      GND                         : 1
-#      LUT2                        : 4
-#      LUT3                        : 253
-#      LUT4                        : 33
-#      LUT5                        : 245
-#      LUT6                        : 1006
-#      MUXF7                       : 284
+#      INV                         : 2
+#      LUT2                        : 116
+#      LUT3                        : 331
+#      LUT4                        : 23
+#      LUT5                        : 553
+#      LUT6                        : 1191
+#      MUXF7                       : 320
 #      MUXF8                       : 32
 #      VCC                         : 1
-# FlipFlops/Latches                : 1519
-#      FD                          : 97
-#      FDCE                        : 14
-#      FDE                         : 1408
+# FlipFlops/Latches                : 1552
+#      FDCE                        : 15
+#      FDE                         : 1536
+#      FDS                         : 1
+# RAMS                             : 8
+#      RAMB18E1                    : 8
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 258
-#      IBUF                        : 130
+# IO Buffers                       : 386
+#      IBUF                        : 258
 #      OBUF                        : 128
 
 Device utilization summary:
@@ -404,22 +846,24 @@ Selected Device : 6vlx75tff484-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1519  out of  93120     1%  
- Number of Slice LUTs:                 1541  out of  46560     3%  
-    Number used as Logic:              1541  out of  46560     3%  
+ Number of Slice Registers:            1552  out of  93120     1%  
+ Number of Slice LUTs:                 2216  out of  46560     4%  
+    Number used as Logic:              2216  out of  46560     4%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2487
-   Number with an unused Flip Flop:     968  out of   2487    38%  
-   Number with an unused LUT:           946  out of   2487    38%  
-   Number of fully used LUT-FF pairs:   573  out of   2487    23%  
-   Number of unique control sets:        14
+ Number of LUT Flip Flop pairs used:   3126
+   Number with an unused Flip Flop:    1574  out of   3126    50%  
+   Number with an unused LUT:           910  out of   3126    29%  
+   Number of fully used LUT-FF pairs:   642  out of   3126    20%  
+   Number of unique control sets:        15
 
 IO Utilization: 
  Number of IOs:                         387
- Number of bonded IOBs:                 259  out of    240   107% (*) 
+ Number of bonded IOBs:                 387  out of    240   161% (*) 
 
 Specific Feature Utilization:
+ Number of Block RAM/FIFO:                4  out of    156     2%  
+    Number using Block RAM only:          4
  Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
 
 WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
@@ -445,20 +889,24 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 1519  |
+clk                                | BUFGP                  | 1560  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
-No asynchronous control signals found in this design
+-----------------------------------+--------------------------------------------------------+-------+
+Control Signal                     | Buffer(FF name)                                        | Load  |
+-----------------------------------+--------------------------------------------------------+-------+
+N1(XST_GND:G)                      | NONE(encrypter_Mram_state[79]_GND_6_o_wide_mux_16_OUT1)| 48    |
+-----------------------------------+--------------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 3.392ns (Maximum Frequency: 294.831MHz)
-   Minimum input arrival time before clock: 1.063ns
-   Maximum output required time after clock: 0.756ns
+   Minimum period: 3.382ns (Maximum Frequency: 295.685MHz)
+   Minimum input arrival time before clock: 1.831ns
+   Maximum output required time after clock: 0.562ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -467,22 +915,22 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 3.392ns (frequency: 294.831MHz)
-  Total number of paths / destination ports: 958767 / 2940
+  Clock period: 3.382ns (frequency: 295.685MHz)
+  Total number of paths / destination ports: 974699 / 3247
 -------------------------------------------------------------------------
-Delay:               3.392ns (Levels of Logic = 8)
+Delay:               3.382ns (Levels of Logic = 8)
   Source:            round_number_2_2 (FF)
-  Destination:       key_scheduler/keys_0_118 (FF)
+  Destination:       key_scheduler/keys_0_104 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: round_number_2_2 to key_scheduler/keys_0_118
+  Data Path: round_number_2_2 to key_scheduler/keys_0_104
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            17   0.280   0.668  round_number_2_2 (round_number_2_2)
-     LUT6:I0->O            1   0.053   0.000  key_scheduler/mux211_5_f7_SW0_G (N1285)
-     MUXF7:I1->O           4   0.187   0.310  key_scheduler/mux211_5_f7_SW0 (N448)
+     FDCE:C->Q            15   0.280   0.659  round_number_2_2 (round_number_2_2)
+     LUT6:I0->O            1   0.053   0.000  key_scheduler/mux211_5_f7_SW0_G (N1748)
+     MUXF7:I1->O           4   0.187   0.310  key_scheduler/mux211_5_f7_SW0 (N512)
      LUT6:I5->O           32   0.053   0.701  key_scheduler/GND_5_o_GND_5_o_sub_2_OUT<3>83 (key_scheduler/GND_5_o_X_5_o_wide_mux_2_OUT<5>)
      LUT6:I0->O            1   0.053   0.000  key_scheduler_Mram_GND_5_o_GND_5_o_wide_mux_7_OUT3 (key_scheduler_Mram_GND_5_o_GND_5_o_wide_mux_7_OUT2)
      MUXF7:I1->O           1   0.187   0.000  key_scheduler_Mram_GND_5_o_GND_5_o_wide_mux_7_OUT_f7_0 (key_scheduler_Mram_GND_5_o_GND_5_o_wide_mux_7_OUT_f71)
@@ -491,48 +939,48 @@ Delay:               3.392ns (Levels of Logic = 8)
      LUT6:I5->O            1   0.053   0.000  key_scheduler/Mmux_keys[0][127]_original_key[127]_mux_25_OUT610 (key_scheduler/keys[0][127]_original_key[127]_mux_25_OUT<104>)
      FDE:D                    -0.012          key_scheduler/keys_0_104
     ----------------------------------------
-    Total                      3.392ns (1.050ns logic, 2.342ns route)
+    Total                      3.382ns (1.050ns logic, 2.332ns route)
                                        (31.0% logic, 69.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 160 / 156
+  Total number of paths / destination ports: 676 / 414
 -------------------------------------------------------------------------
-Offset:              1.063ns (Levels of Logic = 3)
-  Source:            key<91> (PAD)
-  Destination:       key_scheduler/keys_0_91 (FF)
+Offset:              1.831ns (Levels of Logic = 3)
+  Source:            d<124> (PAD)
+  Destination:       encrypter_Mram_state[127]_GND_6_o_wide_mux_2_OUT1 (RAM)
   Destination Clock: clk rising
 
-  Data Path: key<91> to key_scheduler/keys_0_91
+  Data Path: d<124> to encrypter_Mram_state[127]_GND_6_o_wide_mux_2_OUT1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.003   0.362  key_91_IBUF (key_91_IBUF)
-     LUT4:I2->O            1   0.053   0.592  key_scheduler/Mxor_GND_5_o_GND_5_o_xor_10_OUT_27_xo<0>1_SW3 (N1042)
-     LUT6:I1->O            1   0.053   0.000  key_scheduler/Mmux_keys[0][127]_original_key[127]_mux_25_OUT1191 (key_scheduler/keys[0][127]_original_key[127]_mux_25_OUT<91>)
-     FDE:D                    -0.012          key_scheduler/keys_0_91
+     IBUF:I->O             2   0.003   0.597  d_124_IBUF (d_124_IBUF)
+     LUT5:I0->O            1   0.053   0.481  encrypter/Mmux_state[127]_plaintext[127]_mux_102_OUT281_SW0 (N913)
+     LUT6:I2->O            2   0.053   0.284  encrypter/Mmux_state[127]_plaintext[127]_mux_102_OUT282 (encrypter/state[127]_plaintext[127]_mux_102_OUT<124>)
+     RAMB18E1:ADDRARDADDR7        0.361          encrypter_Mram_state[127]_GND_6_o_wide_mux_2_OUT1
     ----------------------------------------
-    Total                      1.063ns (0.109ns logic, 0.954ns route)
-                                       (10.3% logic, 89.7% route)
+    Total                      1.831ns (0.470ns logic, 1.361ns route)
+                                       (25.7% logic, 74.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 100 / 100
+  Total number of paths / destination ports: 128 / 128
 -------------------------------------------------------------------------
-Offset:              0.756ns (Levels of Logic = 1)
-  Source:            round_number_0 (FF)
-  Destination:       q<0> (PAD)
+Offset:              0.562ns (Levels of Logic = 1)
+  Source:            encrypter/state_127 (FF)
+  Destination:       q<127> (PAD)
   Source Clock:      clk rising
 
-  Data Path: round_number_0 to q<0>
+  Data Path: encrypter/state_127 to q<127>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q          1001   0.280   0.473  round_number_0 (round_number_0)
-     OBUF:I->O                 0.003          q_0_OBUF (q<0>)
+     FDE:C->Q              1   0.280   0.279  encrypter/state_127 (encrypter/state_127)
+     OBUF:I->O                 0.003          q_127_OBUF (q<127>)
     ----------------------------------------
-    Total                      0.756ns (0.283ns logic, 0.473ns route)
-                                       (37.4% logic, 62.6% route)
+    Total                      0.562ns (0.283ns logic, 0.279ns route)
+                                       (50.3% logic, 49.7% route)
 
 =========================================================================
 
@@ -544,20 +992,20 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    3.392|         |         |         |
+clk            |    3.382|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 22.00 secs
-Total CPU time to Xst completion: 22.04 secs
+Total REAL time to Xst completion: 30.00 secs
+Total CPU time to Xst completion: 29.72 secs
  
 --> 
 
-Total memory usage is 338860 kilobytes
+Total memory usage is 371244 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   69 (   0 filtered)
-Number of infos    :    6 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :   46 (   0 filtered)
 

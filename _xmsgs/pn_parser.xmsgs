@@ -8,7 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;D:/pa1038-DO NOT DELETE/aes_128_v3/key_schedule.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;D:/pa1038-DO NOT DELETE/aes_128_v3/encrypt_module.vhd&quot; into library work</arg>
 </msg>
 
 </messages>
