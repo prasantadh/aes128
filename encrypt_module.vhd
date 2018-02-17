@@ -168,7 +168,6 @@ begin
 				end if;
 			end if;
 		end if;
-end process;
--- ciphertext <= state; 
+end process; 
 end Behavioral;
 

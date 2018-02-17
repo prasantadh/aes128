@@ -91,11 +91,13 @@ BEGIN
    begin		
       -- hold reset state for 100 ns.
       wait for 90 ns;
+			enc <= '0';
 			key <= x"5468617473206D79204B756E67204675";
-			d <= x"54776F204F6E65204E696E652054776F";
+			--d <= x"54776F204F6E65204E696E652054776F";
+			-- out 29c3505f571420f6402299b31a02d73a
+			d <= x"29c3505f571420f6402299b31a02d73a";
 		wait for 10 ns;
 			clr <= '0';
-
 
       wait for clk_period*10;
 
