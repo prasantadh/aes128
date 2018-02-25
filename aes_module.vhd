@@ -68,7 +68,7 @@ architecture Behavioral of aes_module is
 	end component;
 	
 	-- the signal to keep track of the current round number
-	signal round_number : integer range 0 to 10 := 0;
+	signal round_number : STD_LOGIC_VECTOR(3 downto 0) := x"0";
 	
 	-- the bit to persist state 0 for a full cycle
 	signal en : bit := '0';
@@ -82,43 +82,43 @@ begin
 
 
 -- map the ports of other components
-key_scheduler : key_schedule port map (clr, clk, key, STD_LOGIC_VECTOR(to_unsigned(round_number, 4)), keys_filled, round_key);
-encrypter : encrypt_module port map(not keys_filled, clk, STD_LOGIC_VECTOR(to_unsigned(round_number, 4)), round_key, d,ciphertext);
-decrypter : decrypt_module port map(not keys_filled, clk, STD_LOGIC_VECTOR(to_unsigned(round_number, 4)), round_key, d,plaintext);
+key_scheduler : key_schedule port map (clr, clk, key, round_number, keys_filled, round_key);
+encrypter : encrypt_module port map(not keys_filled, clk, round_number, round_key, d,ciphertext);
+decrypter : decrypt_module port map(not keys_filled, clk, round_number, round_key, d,plaintext);
 
 
 state_machine_process:
 process(clr, clk)
 begin
 	if clr = '1' then
-		round_number <= 0;
+		round_number <= x"0";
 		keys_filled <= '0';
 	elsif rising_edge(clk) then
 		if en = '0' then
 			en <= '1';
 		elsif keys_filled = '0' then
-			if round_number = 10 then
+			if round_number = x"A" then
 				keys_filled <= '1';
 				if enc = '1' then
-					round_number <= 0;
+					round_number <= x"0";
 				else
-					round_number <= 10;
+					round_number <= x"A";
 				end if;
 			else
-				round_number <= round_number + 1;
+				round_number <= std_logic_vector(unsigned(round_number) + 1);
 			end if;
 		else
 			if enc = '1' then
-				if round_number = 10 then
-					round_number <= 0;
+				if round_number = x"A" then
+					round_number <= x"0";
 				else
-					round_number <= round_number + 1;
+					round_number <= std_logic_vector(unsigned(round_number) + 1);
 				end if;
 			else
-				if round_number = 0 then
-					round_number <= 10;
+				if round_number = x"0" then
+					round_number <= x"A";
 				else
-					round_number <= round_number - 1;
+					round_number <= std_logic_vector(unsigned(round_number) - 1);
 				end if;
 			end if;
 		end if;
