@@ -1,7 +1,10 @@
-set -tmpdir "D:/pa1038-DO NOT DELETE/aes_128_v3/xst/projnav.tmp"
-set -xsthdpdir "D:/pa1038-DO NOT DELETE/aes_128_v3/xst"
-run -compileonly yes
--p xc6vlx75t-3-ff484
+set -tmpdir "xst/projnav.tmp"
+set -xsthdpdir "xst"
+run
+-ifn aes_module.prj
+-ofn aes_module
+-ofmt NGC
+-p xc6slx16-3-csg324
 -top aes_module
 -opt_mode Speed
 -opt_level 1
@@ -35,7 +38,7 @@ run -compileonly yes
 -async_to_sync NO
 -shreg_min_size 2
 -use_dsp48 Auto
--iobuf YES
+-iobuf NO
 -max_fanout 100000
 -bufg 16
 -register_duplication YES
@@ -47,4 +50,3 @@ run -compileonly yes
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
--ifn aes_module.prj

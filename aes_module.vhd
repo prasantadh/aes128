@@ -40,13 +40,18 @@ end aes_module;
 
 architecture Behavioral of aes_module is
 
+	component ram is
+    port ( clk : in  STD_LOGIC;
+           we : in  STD_LOGIC;
+           address : in  STD_LOGIC_VECTOR (3 downto 0);
+           datain : in  STD_LOGIC_VECTOR (127 downto 0);
+           dataout : out  STD_LOGIC_VECTOR (127 downto 0));
+	end component;
+
 	component key_schedule is
-    port ( clr : in  STD_LOGIC;
-           clk : in  STD_LOGIC;
-           original_key : in  STD_LOGIC_VECTOR (127 downto 0);
+    port ( current_key : in  STD_LOGIC_VECTOR (127 downto 0);
            round_number : in  STD_LOGIC_VECTOR (3 downto 0);
-			  send_key  : in STD_LOGIC;
-           round_key : out  STD_LOGIC_VECTOR (127 downto 0));
+           next_key : out  STD_LOGIC_VECTOR (127 downto 0));
 	end component;
 
 	component encrypt_module is
@@ -67,25 +72,40 @@ architecture Behavioral of aes_module is
            plaintext : out  STD_LOGIC_VECTOR (127 downto 0));
 	end component;
 	
+	component reg16B is
+    port ( clk : in  STD_LOGIC;
+           d : in  STD_LOGIC_VECTOR (127 downto 0);
+           q : out  STD_LOGIC_VECTOR (127 downto 0));
+	end component;
+	
 	-- the signal to keep track of the current round number
 	signal round_number : STD_LOGIC_VECTOR(3 downto 0) := x"0";
 	
 	-- the bit to persist state 0 for a full cycle
-	signal en : bit := '0';
+	signal en : STD_LOGIC := '0';
 	signal keys_filled   : STD_LOGIC := '0';  -- the bit to indicate that all keys have been filled
 	
 	-- signal to get from other components
 	signal round_key : STD_LOGIC_VECTOR(127 downto 0); 
 	signal ciphertext: STD_LOGIC_VECTOR(127 downto 0);
 	signal plaintext : STD_LOGIC_VECTOR(127 downto 0);
+	signal key_schedule_output : STD_LOGIC_VECTOR(127 downto 0);
+	signal ram_input : STD_LOGIC_VECTOR(127 downto 0);
+	
+	signal key_hold_input : STD_LOGIC_VECTOR(127 downto 0);
+	signal key_hold_output: STD_LOGIC_VECTOR(127 downto 0);
 begin
 
 
 -- map the ports of other components
-key_scheduler : key_schedule port map (clr, clk, key, round_number, keys_filled, round_key);
+key_scheduler 	: key_schedule port map (key_hold_output, round_number, key_schedule_output);
+
+key_hold_input <= key when (round_number = x"0" and en='0') else key_schedule_output;
+key_hold : reg16B port map(clk, key_hold_input, key_hold_output);
+key_storage	: ram port map(clk, not keys_filled, round_number, key_hold_output, round_key);
+
 encrypter : encrypt_module port map(not keys_filled, clk, round_number, round_key, d,ciphertext);
 decrypter : decrypt_module port map(not keys_filled, clk, round_number, round_key, d,plaintext);
-
 
 state_machine_process:
 process(clr, clk)

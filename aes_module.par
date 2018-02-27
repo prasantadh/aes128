@@ -1,0 +1,955 @@
+Release 14.7 par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C2-DS-PC-03::  Tue Feb 27 22:16:27 2018
+
+par -w -intstyle ise -ol high -mt off aes_module_map.ncd aes_module.ncd
+aes_module.pcf 
+
+
+Constraints file: aes_module.pcf.
+Loading device for application Rf_Device from file '6slx16.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+   "aes_module" is an NCD, version 3.2, device xc6slx16, package csg324, speed -3
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.23 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                   806 out of  18,224    4%
+    Number used as Flip Flops:                 678
+    Number used as Latches:                    128
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      2,336 out of   9,112   25%
+    Number used as logic:                    2,256 out of   9,112   24%
+      Number using O6 output only:           2,019
+      Number using O5 output only:               0
+      Number using O5 and O6:                  237
+      Number used as ROM:                        0
+    Number used as Memory:                      77 out of   2,176    3%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:           77
+        Number using O6 output only:            22
+        Number using O5 output only:             4
+        Number using O5 and O6:                 51
+      Number used as Shift Register:             0
+    Number used exclusively as route-thrus:      3
+      Number with same-slice register load:      3
+      Number with same-slice carry load:         0
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,059 out of   2,278   46%
+  Number of MUXCYs used:                         0 out of   4,556    0%
+  Number of LUT Flip Flop pairs used:        2,598
+    Number with an unused Flip Flop:         1,803 out of   2,598   69%
+    Number with an unused LUT:                 262 out of   2,598   10%
+    Number of fully used LUT-FF pairs:         533 out of   2,598   20%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  18,224    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                         10 out of      64   15%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       0 out of      16    0%
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      32    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 6 secs 
+Finished initial Timing Analysis.  REAL time: 6 secs 
+
+WARNING:Par:289 - The signal key<127> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<126> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<125> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<124> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<123> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<122> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<121> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<120> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<119> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<118> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<117> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<116> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<115> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<114> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<113> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<112> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<111> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<110> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<109> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<108> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<107> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<106> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<105> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<104> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<103> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<102> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<101> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<100> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<99> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<98> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<97> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<96> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<95> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<94> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<93> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<92> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<91> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<90> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<89> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<88> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<87> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<86> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<85> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<84> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<83> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<82> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<81> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<80> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<79> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<78> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<77> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<76> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<75> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<74> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<73> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<72> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<71> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<70> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<69> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<68> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<67> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<66> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<65> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<64> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<63> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<62> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<61> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<60> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<59> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<58> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<57> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<56> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<55> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<54> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<53> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<52> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<51> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<50> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<49> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<48> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<47> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<46> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<45> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<44> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<43> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<42> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<41> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<40> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<39> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<38> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<37> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<36> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<35> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<34> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<33> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<32> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<31> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<30> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<29> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<28> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<27> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<26> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<25> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<24> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<23> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<22> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<21> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<20> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<19> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<18> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<17> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<16> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<15> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<14> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<13> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<12> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<11> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<10> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<9> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<8> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<7> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<6> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<5> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<4> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<3> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<2> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<1> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal key<0> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<127> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<126> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<125> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<124> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<123> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<122> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<121> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<120> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<119> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<118> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<117> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<116> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<115> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<114> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<113> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<112> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<111> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<110> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<109> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<108> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<107> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<106> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<105> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<104> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<103> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<102> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<101> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<100> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<99> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<98> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<97> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<96> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<95> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<94> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<93> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<92> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<91> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<90> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<89> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<88> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<87> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<86> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<85> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<84> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<83> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<82> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<81> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<80> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<79> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<78> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<77> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<76> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<75> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<74> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<73> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<72> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<71> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<70> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<69> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<68> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<67> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<66> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<65> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<64> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<63> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<62> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<61> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<60> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<59> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<58> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<57> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<56> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<55> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<54> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<53> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<52> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<51> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<50> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<49> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<48> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<47> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<46> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<45> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<44> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<43> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<42> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<41> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<40> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<39> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<38> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<37> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<36> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<35> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<34> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<33> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<32> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<31> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<30> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<29> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<28> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<27> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<26> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<25> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<24> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<23> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<22> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<21> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<20> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<19> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<18> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<17> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<16> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<15> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<14> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<13> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<12> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<11> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<10> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<9> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<8> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<7> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<6> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<5> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<4> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<3> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<2> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<1> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal d<0> has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal clr has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal clk has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:289 - The signal enc has no driver.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<127> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<126> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<125> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<124> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<123> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<122> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<121> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<120> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<119> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<118> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<117> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<116> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<115> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<114> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<113> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<112> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<111> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<110> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<109> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<108> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<107> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<106> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<105> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<104> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<103> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<102> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<101> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<100> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<99> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<98> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<97> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<96> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<95> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<94> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<93> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<92> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<91> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<90> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<89> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<88> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<87> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<86> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<85> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<84> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<83> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<82> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<81> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<80> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<79> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<78> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<77> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<76> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<75> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<74> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<73> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<72> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<71> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<70> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<69> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<68> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<67> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<66> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<65> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<64> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<63> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<62> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<61> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<60> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<59> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<58> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<57> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<56> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<55> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<54> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<53> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<52> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<51> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<50> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<49> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<48> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<47> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<46> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<45> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<44> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<43> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<42> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<41> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<40> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<39> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<38> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<37> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<36> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<35> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<34> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<33> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<32> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<31> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<30> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<29> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<28> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<27> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<26> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<25> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<24> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<23> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<22> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<21> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<20> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<19> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<18> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<17> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<16> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<15> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<14> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<13> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<12> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<11> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<10> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<9> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<8> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<7> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<6> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<5> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<4> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<3> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<2> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<1> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal q<0> has no load.  PAR will not attempt to route this signal.
+Starting Router
+
+
+Phase  1  : 12949 unrouted;      REAL time: 7 secs 
+
+Phase  2  : 12348 unrouted;      REAL time: 7 secs 
+
+Phase  3  : 3386 unrouted;      REAL time: 14 secs 
+
+Phase  4  : 3405 unrouted; (Par is working to improve performance)     REAL time: 15 secs 
+
+Updating file: aes_module.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 24 secs 
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 25 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 25 secs 
+
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 25 secs 
+
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 26 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 26 secs 
+Total REAL time to Router completion: 26 secs 
+Total CPU time to Router completion: 27 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
+Timing Score: 205 (Setup: 205, Hold: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     9.391ns|     N/A|           0
+                                            | HOLD        |     0.299ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.921ns|     N/A|           0
+  rypter/clr_state[127]_AND_256_o           | HOLD        |     1.078ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.579ns|     N/A|           0
+  rypter/clr_state[127]_AND_192_o           | HOLD        |     0.761ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.918ns|     N/A|           0
+  rypter/clr_state[127]_AND_184_o           | HOLD        |     1.000ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.768ns|     N/A|           0
+  rypter/clr_state[127]_AND_176_o           | HOLD        |     0.951ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.842ns|     N/A|           0
+  rypter/clr_state[127]_AND_168_o           | HOLD        |     0.949ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.753ns|     N/A|           0
+  rypter/clr_state[127]_AND_248_o           | HOLD        |     0.974ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.597ns|     N/A|           0
+  rypter/clr_state[127]_AND_258_o           | HOLD        |     0.789ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.707ns|     N/A|           0
+  rypter/clr_state[127]_AND_194_o           | HOLD        |     0.908ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.582ns|     N/A|           0
+  rypter/clr_state[127]_AND_186_o           | HOLD        |     0.755ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.582ns|     N/A|           0
+  rypter/clr_state[127]_AND_178_o           | HOLD        |     0.764ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.795ns|     N/A|           0
+  rypter/clr_state[127]_AND_196_o           | HOLD        |     0.847ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.773ns|     N/A|           0
+  rypter/clr_state[127]_AND_188_o           | HOLD        |     0.900ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.588ns|     N/A|           0
+  rypter/clr_state[127]_AND_198_o           | HOLD        |     0.780ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     2.058ns|     N/A|           0
+  rypter/clr_state[127]_AND_10_o            | HOLD        |     1.037ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     2.149ns|     N/A|           0
+  rypter/clr_state[127]_AND_20_o            | HOLD        |     1.066ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.818ns|     N/A|           0
+  rypter/clr_state[127]_AND_12_o            | HOLD        |     0.982ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.904ns|     N/A|           0
+  rypter/clr_state[127]_AND_30_o            | HOLD        |     0.926ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.902ns|     N/A|           0
+  rypter/clr_state[127]_AND_22_o            | HOLD        |     0.924ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.567ns|     N/A|           0
+  rypter/clr_state[127]_AND_14_o            | HOLD        |     0.868ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     2.033ns|     N/A|           0
+  rypter/clr_state[127]_AND_40_o            | HOLD        |     1.164ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.795ns|     N/A|           0
+  rypter/clr_state[127]_AND_32_o            | HOLD        |     0.866ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.809ns|     N/A|           0
+  rypter/clr_state[127]_AND_24_o            | HOLD        |     0.973ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.708ns|     N/A|           0
+  rypter/clr_state[127]_AND_16_o            | HOLD        |     0.903ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.797ns|     N/A|           0
+  rypter/clr_state[127]_AND_42_o            | HOLD        |     0.849ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.634ns|     N/A|           0
+  rypter/clr_state[127]_AND_34_o            | HOLD        |     0.777ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.674ns|     N/A|           0
+  rypter/clr_state[127]_AND_26_o            | HOLD        |     0.796ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.627ns|     N/A|           0
+  rypter/clr_state[127]_AND_18_o            | HOLD        |     0.880ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.760ns|     N/A|           0
+  rypter/clr_state[127]_AND_50_o            | HOLD        |     0.981ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.597ns|     N/A|           0
+  rypter/clr_state[127]_AND_60_o            | HOLD        |     0.789ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.854ns|     N/A|           0
+  rypter/clr_state[127]_AND_36_o            | HOLD        |     0.938ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.804ns|     N/A|           0
+  rypter/clr_state[127]_AND_28_o            | HOLD        |     0.875ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.712ns|     N/A|           0
+  rypter/clr_state[127]_AND_52_o            | HOLD        |     0.832ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.805ns|     N/A|           0
+  rypter/clr_state[127]_AND_44_o            | HOLD        |     0.876ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.736ns|     N/A|           0
+  rypter/clr_state[127]_AND_70_o            | HOLD        |     0.867ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.703ns|     N/A|           0
+  rypter/clr_state[127]_AND_62_o            | HOLD        |     0.853ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     2.004ns|     N/A|           0
+  rypter/clr_state[127]_AND_38_o            | HOLD        |     1.113ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.794ns|     N/A|           0
+  rypter/clr_state[127]_AND_54_o            | HOLD        |     0.994ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.807ns|     N/A|           0
+  rypter/clr_state[127]_AND_46_o            | HOLD        |     0.878ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.926ns|     N/A|           0
+  rypter/clr_state[127]_AND_80_o            | HOLD        |     1.036ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.809ns|     N/A|           0
+  rypter/clr_state[127]_AND_72_o            | HOLD        |     0.963ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.830ns|     N/A|           0
+  rypter/clr_state[127]_AND_64_o            | HOLD        |     0.949ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.871ns|     N/A|           0
+  rypter/clr_state[127]_AND_56_o            | HOLD        |     0.995ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.588ns|     N/A|           0
+  rypter/clr_state[127]_AND_48_o            | HOLD        |     0.770ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.827ns|     N/A|           0
+  rypter/clr_state[127]_AND_90_o            | HOLD        |     0.958ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.804ns|     N/A|           0
+  rypter/clr_state[127]_AND_82_o            | HOLD        |     0.875ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.896ns|     N/A|           0
+  rypter/clr_state[127]_AND_74_o            | HOLD        |     1.022ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.968ns|     N/A|          15
+  rypter/clr_state[127]_AND_66_o            | HOLD        |     1.076ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.782ns|     N/A|           0
+  rypter/clr_state[127]_AND_58_o            | HOLD        |     0.937ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.929ns|     N/A|           0
+  rypter/clr_state[127]_AND_92_o            | HOLD        |     1.039ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.863ns|     N/A|           0
+  rypter/clr_state[127]_AND_84_o            | HOLD        |     1.057ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.628ns|     N/A|           0
+  rypter/clr_state[127]_AND_76_o            | HOLD        |     0.826ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.656ns|     N/A|           0
+  rypter/clr_state[127]_AND_68_o            | HOLD        |     0.815ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.806ns|     N/A|           0
+  rypter/clr_state[127]_AND_94_o            | HOLD        |     0.877ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.947ns|     N/A|           0
+  rypter/clr_state[127]_AND_86_o            | HOLD        |     1.067ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.807ns|     N/A|           0
+  rypter/clr_state[127]_AND_78_o            | HOLD        |     0.916ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     2.011ns|     N/A|           0
+  rypter/clr_state[127]_AND_96_o            | HOLD        |     1.081ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.918ns|     N/A|           0
+  rypter/clr_state[127]_AND_88_o            | HOLD        |     1.075ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.993ns|     N/A|           0
+  rypter/clr_state[127]_AND_98_o            | HOLD        |     1.064ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.792ns|     N/A|           0
+  rypter/clr_state[127]_AND_8_o             | HOLD        |     0.992ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.636ns|     N/A|           0
+  rypter/clr_state[127]_AND_6_o             | HOLD        |     0.779ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.895ns|     N/A|           0
+  rypter/clr_state[127]_AND_260_o           | HOLD        |     1.021ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.907ns|     N/A|           0
+  rypter/clr_state[127]_AND_254_o           | HOLD        |     0.929ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.672ns|     N/A|           0
+  rypter/clr_state[127]_AND_252_o           | HOLD        |     0.904ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.758ns|     N/A|           0
+  rypter/clr_state[127]_AND_250_o           | HOLD        |     0.979ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.899ns|     N/A|           0
+  rypter/clr_state[127]_AND_246_o           | HOLD        |     1.025ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.653ns|     N/A|           0
+  rypter/clr_state[127]_AND_244_o           | HOLD        |     0.812ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.623ns|     N/A|           0
+  rypter/clr_state[127]_AND_242_o           | HOLD        |     0.868ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.897ns|     N/A|           0
+  rypter/clr_state[127]_AND_240_o           | HOLD        |     1.008ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.804ns|     N/A|           0
+  rypter/clr_state[127]_AND_238_o           | HOLD        |     0.875ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.904ns|     N/A|           0
+  rypter/clr_state[127]_AND_220_o           | HOLD        |     1.058ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.799ns|     N/A|           0
+  rypter/clr_state[127]_AND_236_o           | HOLD        |     0.870ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.905ns|     N/A|           0
+  rypter/clr_state[127]_AND_218_o           | HOLD        |     0.983ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.653ns|     N/A|           0
+  rypter/clr_state[127]_AND_234_o           | HOLD        |     0.812ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.795ns|     N/A|           0
+  rypter/clr_state[127]_AND_200_o           | HOLD        |     0.847ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.779ns|     N/A|           0
+  rypter/clr_state[127]_AND_216_o           | HOLD        |     0.934ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.738ns|     N/A|           0
+  rypter/clr_state[127]_AND_232_o           | HOLD        |     0.829ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.575ns|     N/A|           0
+  rypter/clr_state[127]_AND_214_o           | HOLD        |     0.876ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.797ns|     N/A|           0
+  rypter/clr_state[127]_AND_230_o           | HOLD        |     0.849ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.871ns|     N/A|           0
+  rypter/clr_state[127]_AND_180_o           | HOLD        |     0.975ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.902ns|     N/A|           0
+  rypter/clr_state[127]_AND_212_o           | HOLD        |     0.980ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.797ns|     N/A|           0
+  rypter/clr_state[127]_AND_228_o           | HOLD        |     0.849ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.905ns|     N/A|           0
+  rypter/clr_state[127]_AND_210_o           | HOLD        |     0.927ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.808ns|     N/A|           0
+  rypter/clr_state[127]_AND_226_o           | HOLD        |     0.879ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.829ns|     N/A|           0
+  rypter/clr_state[127]_AND_160_o           | HOLD        |     0.948ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.763ns|     N/A|           0
+  rypter/clr_state[127]_AND_208_o           | HOLD        |     0.902ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.902ns|     N/A|           0
+  rypter/clr_state[127]_AND_224_o           | HOLD        |     0.956ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.887ns|     N/A|           0
+  rypter/clr_state[127]_AND_158_o           | HOLD        |     0.994ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.893ns|     N/A|           0
+  rypter/clr_state[127]_AND_174_o           | HOLD        |     1.004ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.763ns|     N/A|           0
+  rypter/clr_state[127]_AND_190_o           | HOLD        |     0.890ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.396ns|     N/A|           0
+  rypter/clr_state[127]_AND_206_o           | HOLD        |     0.699ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.738ns|     N/A|           0
+  rypter/clr_state[127]_AND_222_o           | HOLD        |     0.829ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.977ns|     N/A|           0
+  rypter/clr_state[127]_AND_140_o           | HOLD        |     1.089ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.971ns|     N/A|           0
+  rypter/clr_state[127]_AND_156_o           | HOLD        |     1.069ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.564ns|     N/A|           0
+  rypter/clr_state[127]_AND_172_o           | HOLD        |     0.849ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.823ns|     N/A|           0
+  rypter/clr_state[127]_AND_204_o           | HOLD        |     0.942ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.719ns|     N/A|           0
+  rypter/clr_state[127]_AND_138_o           | HOLD        |     0.858ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.566ns|     N/A|           0
+  rypter/clr_state[127]_AND_154_o           | HOLD        |     0.851ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.894ns|     N/A|           0
+  rypter/clr_state[127]_AND_170_o           | HOLD        |     1.020ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.760ns|     N/A|           0
+  rypter/clr_state[127]_AND_202_o           | HOLD        |     0.899ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.682ns|     N/A|           0
+  rypter/clr_state[127]_AND_120_o           | HOLD        |     0.870ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.759ns|     N/A|           0
+  rypter/clr_state[127]_AND_136_o           | HOLD        |     0.980ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.880ns|     N/A|           0
+  rypter/clr_state[127]_AND_152_o           | HOLD        |     1.005ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.807ns|     N/A|           0
+  rypter/clr_state[127]_AND_118_o           | HOLD        |     0.878ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.746ns|     N/A|           0
+  rypter/clr_state[127]_AND_134_o           | HOLD        |     0.896ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     2.069ns|     N/A|           0
+  rypter/clr_state[127]_AND_150_o           | HOLD        |     1.100ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.990ns|     N/A|           0
+  rypter/clr_state[127]_AND_166_o           | HOLD        |     1.080ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.806ns|     N/A|           0
+  rypter/clr_state[127]_AND_182_o           | HOLD        |     0.943ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.799ns|     N/A|           0
+  rypter/clr_state[127]_AND_100_o           | HOLD        |     0.908ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.801ns|     N/A|           0
+  rypter/clr_state[127]_AND_116_o           | HOLD        |     0.872ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     2.030ns|     N/A|           9
+  rypter/clr_state[127]_AND_132_o           | HOLD        |     1.118ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.946ns|     N/A|           0
+  rypter/clr_state[127]_AND_148_o           | HOLD        |     0.968ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.769ns|     N/A|           0
+  rypter/clr_state[127]_AND_164_o           | HOLD        |     0.905ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.758ns|     N/A|           0
+  rypter/clr_state[127]_AND_114_o           | HOLD        |     0.886ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.800ns|     N/A|           0
+  rypter/clr_state[127]_AND_130_o           | HOLD        |     0.871ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.787ns|     N/A|           0
+  rypter/clr_state[127]_AND_146_o           | HOLD        |     0.944ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.769ns|     N/A|           0
+  rypter/clr_state[127]_AND_162_o           | HOLD        |     0.896ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.919ns|     N/A|           0
+  rypter/clr_state[127]_AND_112_o           | HOLD        |     1.074ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.805ns|     N/A|           0
+  rypter/clr_state[127]_AND_128_o           | HOLD        |     0.876ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.796ns|     N/A|           0
+  rypter/clr_state[127]_AND_144_o           | HOLD        |     0.848ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.807ns|     N/A|           0
+  rypter/clr_state[127]_AND_110_o           | HOLD        |     0.878ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.790ns|     N/A|           0
+  rypter/clr_state[127]_AND_126_o           | HOLD        |     0.842ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.386ns|     N/A|           0
+  rypter/clr_state[127]_AND_142_o           | HOLD        |     0.689ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.639ns|     N/A|           0
+  rypter/clr_state[127]_AND_108_o           | HOLD        |     0.782ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.661ns|     N/A|           0
+  rypter/clr_state[127]_AND_124_o           | HOLD        |     0.893ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     2.010ns|     N/A|         181
+  rypter/clr_state[127]_AND_106_o           | HOLD        |     1.055ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.863ns|     N/A|           0
+  rypter/clr_state[127]_AND_122_o           | HOLD        |     0.964ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     1.798ns|     N/A|           0
+  rypter/clr_state[127]_AND_104_o           | HOLD        |     0.850ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net dec | SETUP       |         N/A|     2.066ns|     N/A|           0
+  rypter/clr_state[127]_AND_102_o           | HOLD        |     1.184ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+3 constraints not met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 128 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+WARNING:Par:284 - There are 259 sourceless signals in this design. This design will not pass the DRC check run by
+   Bitgen.
+
+Total REAL time to PAR completion: 29 secs 
+Total CPU time to PAR completion: 28 secs 
+
+Peak Memory Usage:  485 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 391
+Number of info messages: 2
+
+Writing design to file aes_module.ncd
+
+
+
+PAR done!

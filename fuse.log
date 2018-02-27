@@ -3,13 +3,15 @@ ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
+Parsing VHDL file "D:/pa1038-DO NOT DELETE/aes_128_v3/reg16B.vhd" into library work
+Parsing VHDL file "D:/pa1038-DO NOT DELETE/aes_128_v3/ram.vhd" into library work
 Parsing VHDL file "D:/pa1038-DO NOT DELETE/aes_128_v3/key_schedule.vhd" into library work
 Parsing VHDL file "D:/pa1038-DO NOT DELETE/aes_128_v3/encrypt_module.vhd" into library work
 Parsing VHDL file "D:/pa1038-DO NOT DELETE/aes_128_v3/decrypt_module.vhd" into library work
 Parsing VHDL file "D:/pa1038-DO NOT DELETE/aes_128_v3/aes_module.vhd" into library work
-WARNING:HDLCompiler:946 - "D:/pa1038-DO NOT DELETE/aes_128_v3/aes_module.vhd" Line 85: Actual for formal port round_number is neither a static name nor a globally static expression
-WARNING:HDLCompiler:946 - "D:/pa1038-DO NOT DELETE/aes_128_v3/aes_module.vhd" Line 86: Actual for formal port clr is neither a static name nor a globally static expression
-WARNING:HDLCompiler:946 - "D:/pa1038-DO NOT DELETE/aes_128_v3/aes_module.vhd" Line 87: Actual for formal port clr is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/pa1038-DO NOT DELETE/aes_128_v3/aes_module.vhd" Line 127: Actual for formal port we is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/pa1038-DO NOT DELETE/aes_128_v3/aes_module.vhd" Line 129: Actual for formal port clr is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/pa1038-DO NOT DELETE/aes_128_v3/aes_module.vhd" Line 130: Actual for formal port clr is neither a static name nor a globally static expression
 Parsing VHDL file "D:/pa1038-DO NOT DELETE/aes_128_v3/test_aes_module.vhd" into library work
 Starting static elaboration
 Completed static elaboration
@@ -17,13 +19,15 @@ Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
 Compiling architecture behavioral of entity key_schedule [key_schedule_default]
+Compiling architecture behavioral of entity reg16B [reg16b_default]
+Compiling architecture behavioral of entity ram [ram_default]
 Compiling architecture behavioral of entity encrypt_module [encrypt_module_default]
 Compiling architecture behavioral of entity decrypt_module [decrypt_module_default]
 Compiling architecture behavioral of entity aes_module [aes_module_default]
 Compiling architecture behavior of entity test_aes_module
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 12 VHDL Units
+Waiting for 2 sub-compilation(s) to finish...
+Compiled 16 VHDL Units
 Built simulation executable D:/pa1038-DO NOT DELETE/aes_128_v3/test_aes_module_isim_beh.exe
-Fuse Memory Usage: 38668 KB
-Fuse CPU Usage: 687 ms
+Fuse Memory Usage: 38128 KB
+Fuse CPU Usage: 811 ms

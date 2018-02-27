@@ -10,71 +10,11 @@ Time resolution is 1 ps
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
+at 0 ps, Instance /test_aes_module/uut/key_scheduler/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /test_aes_module/uut/key_scheduler/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /test_aes_module/uut/key_scheduler/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /test_aes_module/uut/key_scheduler/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 Finished circuit initialization process.
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 235 ns(1), Instance /test_aes_module/uut/decrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -82,6 +22,22 @@ WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for 
 This is a Lite version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
+at 0 ps, Instance /test_aes_module/uut/key_scheduler/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /test_aes_module/uut/key_scheduler/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /test_aes_module/uut/key_scheduler/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /test_aes_module/uut/key_scheduler/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+Finished circuit initialization process.
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /test_aes_module/uut/key_scheduler/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /test_aes_module/uut/key_scheduler/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /test_aes_module/uut/key_scheduler/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /test_aes_module/uut/key_scheduler/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 Finished circuit initialization process.
 at 225 ns(1), Instance /test_aes_module/uut/encrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 225 ns(1), Instance /test_aes_module/uut/encrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -122,6 +78,10 @@ WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for 
 This is a Lite version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
+at 0 ps, Instance /test_aes_module/uut/key_scheduler/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /test_aes_module/uut/key_scheduler/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /test_aes_module/uut/key_scheduler/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /test_aes_module/uut/key_scheduler/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 Finished circuit initialization process.
 at 225 ns(1), Instance /test_aes_module/uut/encrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 225 ns(1), Instance /test_aes_module/uut/encrypter/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0

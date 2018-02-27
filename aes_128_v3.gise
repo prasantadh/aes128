@@ -25,24 +25,42 @@
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
-    <file xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="aes_module.bld"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="aes_module.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="aes_module.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="aes_module.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="aes_module.ncd" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="aes_module.ngc"/>
-    <file xil_pn:fileType="FILE_NGD" xil_pn:name="aes_module.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="aes_module.ngd"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="aes_module.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="aes_module.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="aes_module.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="aes_module.pcf" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="aes_module.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="aes_module.ptwx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="aes_module.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="aes_module.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="aes_module.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="aes_module.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="aes_module.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="aes_module.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="aes_module.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="aes_module_envsettings.html"/>
-    <file xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="aes_module_map.map"/>
-    <file xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="aes_module_map.mrp"/>
-    <file xil_pn:fileType="FILE_NGM" xil_pn:name="aes_module_map.ngm"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="aes_module_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="aes_module_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="aes_module_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="aes_module_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="aes_module_map.ngm" xil_pn:subbranch="Map"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="aes_module_map.xrpt"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="aes_module_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="aes_module_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="aes_module_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="aes_module_par.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="aes_module_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="aes_module_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="aes_module_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="aes_module_xst.xrpt"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
@@ -58,41 +76,38 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1518855624" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1518855624">
+    <transform xil_pn:end_ts="1519754084" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1519754084">
+      <status xil_pn:value="SuccessfullyRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1519754084" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="6420803303835967017" xil_pn:start_ts="1519754084">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1518855624" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-4577255272130981573" xil_pn:start_ts="1518855624">
+    <transform xil_pn:end_ts="1519754117" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="353916572413839352" xil_pn:start_ts="1519754117">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1518855624" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-8367797612420157293" xil_pn:start_ts="1518855624">
+    <transform xil_pn:end_ts="1519754084" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1519754084">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1518855624" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1518855624">
+    <transform xil_pn:end_ts="1519754084" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-8769615150065640213" xil_pn:start_ts="1519754084">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1518855624" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-8769615150065640213" xil_pn:start_ts="1518855624">
+    <transform xil_pn:end_ts="1519754117" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="1106364426758808884" xil_pn:start_ts="1519754117">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1518855624" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-311711526559847569" xil_pn:start_ts="1518855624">
+    <transform xil_pn:end_ts="1519754117" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-7051812187460561726" xil_pn:start_ts="1519754117">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1518855624" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-3561283433525867491" xil_pn:start_ts="1518855624">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1518855680" xil_pn:in_ck="6216021410473730557" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="1662257220691829001" xil_pn:start_ts="1518855624">
+    <transform xil_pn:end_ts="1519755329" xil_pn:in_ck="-8492587390144279388" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="1091087565474026354" xil_pn:start_ts="1519755286">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="aes_module.lso"/>
@@ -105,6 +120,54 @@
       <outfile xil_pn:name="aes_module_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1519754160" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="2619804407585214230" xil_pn:start_ts="1519754160">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1519755337" xil_pn:in_ck="-2242238031270220796" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-8575443759366945543" xil_pn:start_ts="1519755329">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="aes_module.bld"/>
+      <outfile xil_pn:name="aes_module.ngd"/>
+      <outfile xil_pn:name="aes_module_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1519755386" xil_pn:in_ck="-2242238031270220795" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-7028996002982311030" xil_pn:start_ts="1519755337">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="aes_module.pcf"/>
+      <outfile xil_pn:name="aes_module_map.map"/>
+      <outfile xil_pn:name="aes_module_map.mrp"/>
+      <outfile xil_pn:name="aes_module_map.ncd"/>
+      <outfile xil_pn:name="aes_module_map.ngm"/>
+      <outfile xil_pn:name="aes_module_map.xrpt"/>
+      <outfile xil_pn:name="aes_module_summary.xml"/>
+      <outfile xil_pn:name="aes_module_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1519755432" xil_pn:in_ck="-563310619146996322" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1519755386">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="aes_module.ncd"/>
+      <outfile xil_pn:name="aes_module.pad"/>
+      <outfile xil_pn:name="aes_module.par"/>
+      <outfile xil_pn:name="aes_module.ptwx"/>
+      <outfile xil_pn:name="aes_module.unroutes"/>
+      <outfile xil_pn:name="aes_module.xpi"/>
+      <outfile xil_pn:name="aes_module_pad.csv"/>
+      <outfile xil_pn:name="aes_module_pad.txt"/>
+      <outfile xil_pn:name="aes_module_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1519755432" xil_pn:in_ck="-2242238031270220927" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1519755418">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="aes_module.twr"/>
+      <outfile xil_pn:name="aes_module.twx"/>
     </transform>
   </transforms>
 

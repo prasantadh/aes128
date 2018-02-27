@@ -30,19 +30,16 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity key_schedule is
-    Port ( clr : in  STD_LOGIC;
-           clk : in  STD_LOGIC;
-           original_key : in  STD_LOGIC_VECTOR (127 downto 0);
+    Port ( current_key : in  STD_LOGIC_VECTOR (127 downto 0);
            round_number : in  STD_LOGIC_VECTOR (3 downto 0);
-			  send_key  : in STD_LOGIC;
-           round_key : out  STD_LOGIC_VECTOR (127 downto 0));
+           next_key : out  STD_LOGIC_VECTOR (127 downto 0));
 end key_schedule;
 
 architecture Behavioral of key_schedule is
 
 	-- set up an array of rcon values
 	type rcon_t is array (0 to 10) of STD_LOGIC_VECTOR(7 downto 0);
-	constant rcon : rcon_t := (X"8D", X"01", X"02", X"04", X"08", X"10", X"20", X"40", X"80", X"1B", X"36");
+	constant rcon : rcon_t := (X"01", X"02", X"04", X"08", X"10", X"20", X"40", X"80", X"1B", X"36", X"8D");
 	
 	
 	-- set up the sbox values
@@ -83,27 +80,15 @@ architecture Behavioral of key_schedule is
 		return STD_LOGIC_VECTOR(g_current_key_3);
 	end function;
 	
+	-- set up signals for processing words
+	signal next_key_0, next_key_1, next_key_2, next_key_3 : STD_LOGIC_VECTOR (31 downto 0) := x"00000000";
 begin
 
-key_schedule_process:
-process(send_key, clk, round_number)
-	variable current_key : STD_LOGIC_VECTOR(127 downto 0);
-	variable next_key_0, next_key_1, next_key_2, next_key_3 : STD_LOGIC_VECTOR (31 downto 0) := x"00000000";
-	variable q : STD_LOGIC_VECTOR(127 downto 0);
-begin
-	if rising_edge(clk) and send_key ='0' then
-		if (round_number = x"0") then
-			keys(0) <= original_key;
-		else
-			current_key:= keys(to_integer(unsigned(round_number)) - 1);
-			next_key_0 := g(current_key(31 downto 0)) xor current_key(127 downto 96);
-			next_key_1 := next_key_0 xor current_key(95 downto 64);
-			next_key_2 := next_key_1 xor current_key(63 downto 32);
-			next_key_3 := next_key_2 xor current_key(31 downto 00);
-			keys(to_integer(unsigned(round_number))) <= next_key_0 & next_key_1 & next_key_2 & next_key_3;
-		end if;
-	end if;
-end process;
-round_key <= keys(to_integer(unsigned(round_number)));
+	next_key_0 <= g(current_key(31 downto 0)) xor current_key(127 downto 96);
+	next_key_1 <= next_key_0 xor current_key(95 downto 64);
+	next_key_2 <= next_key_1 xor current_key(63 downto 32);
+	next_key_3 <= next_key_2 xor current_key(31 downto 00);
+	next_key   <= next_key_0 & next_key_1 & next_key_2 & next_key_3;
+
 end Behavioral;
 

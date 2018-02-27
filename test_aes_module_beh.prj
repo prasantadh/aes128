@@ -1,3 +1,5 @@
+vhdl work "reg16B.vhd"
+vhdl work "ram.vhd"
 vhdl work "key_schedule.vhd"
 vhdl work "encrypt_module.vhd"
 vhdl work "decrypt_module.vhd"
